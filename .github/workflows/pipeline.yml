@@ -2,7 +2,7 @@ name: Pal Tracker Pipeline
 
 on:
   push:
-    branches: [DB]
+    branches: [master]
 
 jobs:
   build-and-publish:
@@ -13,10 +13,10 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Gradle Permission
-      run: chmod +x ./gradlew
-    - name: SH Permission
-      run: chmod +x ./scripts/migrate-databases.sh
+    - name: Create test database
+      run: |
+        mysql -uroot -proot < databases/tracker/create_databases.sql
+        ./gradlew testMigrate
     - name: Build with Gradle
       run: ./gradlew build
     - name: Publish artifact
