@@ -3,7 +3,7 @@ applications:
   - name: pal-tracker
     path: build/libs/pal-tracker.jar
     routes:
-      - route: pal-tracker-${CF_UNIQUE_IDENTIFIER}.${CF_DOMAIN}
+      - route: pal-tracker-${{ secrets.CF_UNIQUE_IDENTIFIER }}.${{ secrets.CF_DOMAIN }}
     env:
       WELCOME_MESSAGE: Hello from the review environment2
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
