@@ -48,3 +48,5 @@ jobs:
         CF_SPACE: ${{ secrets.CF_SPACE }}
         CF_USERNAME: ${{ secrets.CF_USERNAME }}
         CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
+        CF_DOMAIN: ${{ secrets.DOMAIN }}
+        CF_UNIQUE_IDENTIFIER: ${{ secrets.UNIQUE_IDENTIFIER }}
