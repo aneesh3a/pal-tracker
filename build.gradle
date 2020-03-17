@@ -15,6 +15,7 @@ dependencies {
     }
 }
 
+
 bootRun.environment([
         "WELCOME_MESSAGE": "hello",
 ])
