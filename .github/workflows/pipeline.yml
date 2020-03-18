@@ -16,9 +16,7 @@ jobs:
     - name: Gradle Permission
       run: chmod +x ./gradlew
     - name: create db file permission
-      run: chmod +x ./databases/tracker/create_database.sql
-    - name: db script permission
-      run: chmod +x ./databases/tracker/migrations/V1__initial_schema.sql
+      run: chmod +x bash
     - name: SH Permission
       run: chmod +x ./scripts/migrate-databases.sh
     - name: Build with Gradle

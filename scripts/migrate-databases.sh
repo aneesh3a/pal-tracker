@@ -1,6 +1,10 @@
+echo "1222"
+
 #!/usr/bin/env bash
 
 set -e
+
+echo "2222"
 
 app_name="${1:-pal-tracker}"
 script_dir="${2:-.}"
