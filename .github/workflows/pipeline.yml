@@ -16,7 +16,7 @@ jobs:
     - name: Gradle Permission
       run: chmod +x ./gradlew
     - name: create db file permission
-      run: chmod +x bash
+      run: chmod +x ./scripts/migrate-databases.sh
     - name: Create test database
       run: |
         mysql -uroot -proot < databases/tracker/create_databases.sql
